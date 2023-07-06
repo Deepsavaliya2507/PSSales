@@ -19,22 +19,22 @@ const Newsletter = () => {
 
     const [EmailSub, setEmailSub] = useState("");
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+    // useEffect(() => {
+    //     fetchData();
+    // }, []);
 
-    const fetchData = async () => {
-        const querySnapshot = await getDocs(collection(fireStoreDb, "users"));
-        console.log(querySnapshot.docs);
+    // const fetchData = async () => {
+    //     const querySnapshot = await getDocs(collection(fireStoreDb, "users"));
+    //     console.log(querySnapshot.docs);
 
-        const data = [];
-        querySnapshot.forEach((doc) => {
-            if (doc.data().first) {
-                data.push({ id: doc.id, text: doc.data().first });
-            }
-        });
-        setEmailSub(data);
-    };
+    //     const data = [];
+    //     querySnapshot.forEach((doc) => {
+    //         if (doc.data().first) {
+    //             data.push({ id: doc.id, text: doc.data().first });
+    //         }
+    //     });
+    //     setEmailSub(data);
+    // };
 
     const handleCreate = async () => {
         // Add a new document in collection "cities"
@@ -43,22 +43,8 @@ const Newsletter = () => {
             last: "Lovelace",
             born: 1996,
         });
-        fetchData();
+        // fetchData();
         setEmailSub("");
-    };
-
-    const handleUpdate = async (id, newText) => {
-        await setDoc(doc(fireStoreDb, "users", id), {
-            first: newText,
-            last: "Lovelace",
-            born: 1996,
-        });
-        fetchData();
-    };
-
-    const handleDelete = async (id) => {
-        await deleteDoc(doc(fireStoreDb, "users", id));
-        fetchData();
     };
 
     return (
@@ -76,7 +62,7 @@ const Newsletter = () => {
                      onChange={(e => email_data(e))} value={EmailSub} />
                     <button onClick={() => email_subscribe()} >Subscribe</button> */}
                     <input type="text" placeholder="Email Address"
-                        onChange={(e) => setEmailSub(e.target.value)} value={EmailSub} />
+                        onChange={(e) => setEmailSub(e.target.value)} />
                     <button onClick={() => handleCreate()} >Subscribe</button>
                 </div>
                 <span className="text">
