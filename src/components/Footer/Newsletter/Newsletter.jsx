@@ -8,10 +8,11 @@ import {
 import {
     addDoc,
     collection,
-    deleteDoc,
-    doc,
-    getDocs,
-    setDoc,
+    // deleteDoc,
+    // doc,  
+    
+    // getDocs,
+    // setDoc,
 } from "firebase/firestore";
 import { fireStoreDb } from "../../../firebaseConfig";
 import "./Newsletter.scss";
@@ -37,11 +38,10 @@ const Newsletter = () => {
     // };
 
     const handleCreate = async () => {
-        // Add a new document in collection "cities"
-        await addDoc(collection(fireStoreDb, "users"), {
+        await addDoc(collection(fireStoreDb, "email"), {
             first: EmailSub,
             last: "Lovelace",
-            born: 1996,
+            born: 1234,
         });
         // fetchData();
         setEmailSub("");
@@ -55,12 +55,6 @@ const Newsletter = () => {
                     Sign up for latest updates and offers
                 </span>
                 <div className="form">
-                    {/* <input type="text" placeholder="Email Address"
-                     onChange={(e => email_log(e))} />
-                    <button onClick={() => email_subscribe()}>Subscribe</button> */}
-                    {/* <input type="text" placeholder="Email Address"
-                     onChange={(e => email_data(e))} value={EmailSub} />
-                    <button onClick={() => email_subscribe()} >Subscribe</button> */}
                     <input type="text" placeholder="Email Address"
                         onChange={(e) => setEmailSub(e.target.value)} />
                     <button onClick={() => handleCreate()} >Subscribe</button>

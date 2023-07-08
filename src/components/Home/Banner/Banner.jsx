@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Banner.scss";
-import BannerImg from "../../../assets/banner-img.png";
+// import BannerImg from "../../../assets/banner-img.png";
 
 const Banner = () => {
     return (
@@ -19,7 +19,7 @@ const Banner = () => {
                         <div className="banner-cta v2">Shop Now</div>
                     </div>
                 </div>
-                <img className="banner-img" src={BannerImg} />
+                {/* <img className="banner-img" src={BannerImg} /> */}
             </div>
         </div>
     );
