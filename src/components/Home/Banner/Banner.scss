@@ -1,18 +1,18 @@
 @import "../../../css-config/mixins.scss";
 .hero-banner {
     padding: 40px 0;
-    // position: relative;
-    background-image: url(../../../assets/playstation5.webp);
-    width: 100vw;
+    position: relative;
+    background-image: url(../../../assets/playstation5.png);
+    width: 98.9vw;
     height: 100vh;
-    margin: 0 !important;
+    // margin: 0 !important;
     // background-size: cover;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     // background-image: linear-gradient(to right, #8e2de2, #4a00e0);
-    @include md {
-        height: calc(100vh - 80px);
-    }
+    // @include md {
+    //     height: calc(100vh - 80px);
+    // }
     .content {
         height: 100%; 
         display: flex;
