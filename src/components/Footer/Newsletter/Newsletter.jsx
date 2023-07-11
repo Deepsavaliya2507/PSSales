@@ -14,8 +14,6 @@ import "./Newsletter.scss";
 const Newsletter = () => {
   const [EmailSub, setEmailSub] = useState("");
 
-
-
   const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
   const validateEmail = (e) => {
