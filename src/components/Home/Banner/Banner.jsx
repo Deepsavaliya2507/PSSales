@@ -8,7 +8,7 @@ const Banner = () => {
         <div className="hero-banner">
             <div className="content">
                 <div className="text-content">
-                    <h1>SALES</h1>
+                    <h1>PS5</h1>
                     <p>
                         Convallis interdum purus adipiscing dis parturient
                         posuere ac a quam a eleifend montes parturient posuere
@@ -19,10 +19,12 @@ const Banner = () => {
                         <div className="banner-cta v2">Shop Now</div>
                     </div>
                 </div>
+                    {/* <img src={} alt="" /> */}
                 {/* <img className="banner-img" src={BannerImg} /> */}
             </div>
         </div>
     );
 };
+
 
 export default Banner;

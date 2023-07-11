@@ -8,9 +8,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     // background-image: linear-gradient(to right, #8e2de2, #4a00e0);
-    @include md {
-        height: calc(100vh - 80px);
-    }
+    // @include md {
+    //     height: calc(100vh - 80px);
+    // }
     .content {
         height: 100%; 
         display: flex;

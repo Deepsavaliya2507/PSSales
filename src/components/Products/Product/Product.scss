@@ -1,4 +1,7 @@
 @import "../../../css-config/mixins.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .product-card {
     cursor: pointer;
     width: calc(50% - 5px);
