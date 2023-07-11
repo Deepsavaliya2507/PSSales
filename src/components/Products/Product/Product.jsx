@@ -25,8 +25,8 @@ const Product = ({ data, id }) => {
 
       <div className="container flex border-black items-center">
         <div>
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img src={image} className="w-10" />
+          <div className="max-w-sm space-x-4 rounded overflow-hidden shadow-lg">
+            <img src={image} className="w-10" required />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
               <p className="text-gray-700 text-base">
