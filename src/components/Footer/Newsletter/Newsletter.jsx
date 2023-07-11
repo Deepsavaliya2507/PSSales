@@ -8,33 +8,13 @@ import {
 import {
   addDoc,
   collection,
-  // deleteDoc,
-  // doc,
-
-  // getDocs,
-  // setDoc,
 } from "firebase/firestore";
 import { fireStoreDb } from "../../../firebaseConfig";
 import "./Newsletter.scss";
 const Newsletter = () => {
   const [EmailSub, setEmailSub] = useState("");
 
-  // useEffect(() => {
-  //     fetchData();
-  // }, []);
 
-  // const fetchData = async () => {
-  //     const querySnapshot = await getDocs(collection(fireStoreDb, "users"));
-  //     console.log(querySnapshot.docs);
-
-  //     const data = [];
-  //     querySnapshot.forEach((doc) => {
-  //         if (doc.data().first) {
-  //             data.push({ id: doc.id, text: doc.data().first });
-  //         }
-  //     });
-  //     setEmailSub(data);
-  // };
 
   const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
@@ -54,7 +34,6 @@ const Newsletter = () => {
         last: "Lovelace",
         born: 1234,
       });
-      // fetchData();
       setEmailSub("");
     }
   };
