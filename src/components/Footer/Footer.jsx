@@ -39,9 +39,6 @@ const Footer = () => {
                     <span className="text">PALY STATIONS</span>
                     <span className="text">XBOX</span>
                     <span className="text">NINTENDO</span>
-                    <span className="text"></span>
-                    <span className="text">Home Theatre</span>
-                    <span className="text">Projectors</span>
                 </div>
                 <div className="col">
                     <div className="title">Pages</div>
