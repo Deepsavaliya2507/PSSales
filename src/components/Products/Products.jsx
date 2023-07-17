@@ -2,21 +2,23 @@ import "./Products.scss";
 import Product from "./Product/Product";
 
 const Products = ({ products, innerPage, headingText }) => {
-    return (
-        <div className="products-container flex">
-            {!innerPage && <div className="">{headingText}</div>}
-            <div className={`products ${innerPage ? "innerPage" : ""}`}>
-                {/* {products?.data?.map((item) => (
+  return (
+    <>
+        {!innerPage && <div className="text-2xl">Popular Product</div>}
+      {/* <div className="products-container flex mt-0" required>
+        <div className={`products ${innerPage ? "innerPage" : ""}`}>
+          {Product?.data?.map((item) => (
                     <Product
                         key={item.id}
                         id={item.id}
                         data={item.attributes}
                     />
-                ))} */}
-                <Product />
-            </div>
+                ))}
         </div>
-    );
+      </div> */}
+      <Product />
+    </>
+  );
 };
 
 export default Products;

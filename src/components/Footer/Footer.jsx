@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.scss";
 import { FaLocationArrow, FaMobileAlt, FaEnvelope } from "react-icons/fa";
-import Payment from "../../assets/payments.png";
+// import Payment from "../../assets/payments.png";
 const Footer = () => {
     return (
         <div className="footer">
@@ -53,10 +53,10 @@ const Footer = () => {
             <div className="bottom-bar">
                 <div className="bottom-bar-content">
                     <span className="text">
-                        PSSALES 2023 CREATED BY JS DEV. PREMIUM E-COMMERCE
+                        PSSALES 2023 CREATED BY DEEP PREMIUM E-COMMERCE
                         SOLUTIONS.
                     </span>
-                    <img src={Payment} />
+                    {/* <img src={Payment} /> */}
                 </div>
             </div>
         </div>
