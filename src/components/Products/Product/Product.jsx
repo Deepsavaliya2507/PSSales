@@ -50,7 +50,7 @@ function Post() {
   const [updatedProductPrice, updateProductPrice] = useState("");
 
   const fetchData = async () => {
-    const querySnapshot = await getDocs(collection(fireStoreDb, "products"));
+    const querySnapshot = await getDocs(collection(fireStoreDb, "like"));
 
     const data = [];
     querySnapshot.forEach((doc) => {
@@ -72,10 +72,10 @@ function Post() {
 
   const handleCreate = async () => {
     if (newItem && newPrice && newImage) {
-      await addDoc(collection(fireStoreDb, "products"), {
-        name: newItem,
-        image: newImage,
-        price: newPrice,
+      await addDoc(collection(fireStoreDb, "like"), {
+        name: Like,
+        image: "newImage",
+        price: "newPrice",
       });
       fetchData();
       setNewProductName("");
@@ -87,8 +87,8 @@ function Post() {
 
   const handleUpdate = async (id, newText, newPrice) => {
     if (newText && newPrice) {
-      await setDoc(doc(fireStoreDb, "products", id), {
-        name: newItem,
+      await setDoc(doc(fireStoreDb, "like", id), {
+        name: Like,
         image: "",
         price: newPrice,
       });
@@ -97,12 +97,12 @@ function Post() {
   };
 
   const handleDelete = async (id) => {
-    await deleteDoc(doc(fireStoreDb, "products", id));
+    await deleteDoc(doc(fireStoreDb, "like", id));
     fetchData();
   };
 
   const handleLike = async (data) => {
-    await addDoc(collection(fireStoreDb, "likeProducts"), {
+    await addDoc(collection(fireStoreDb, "like"), {
       name: data.name,
       image: data.image,
       price: data.price,
@@ -123,8 +123,10 @@ function Post() {
               onClick={() => handleCreate()}
             >
               <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart text-red-600"></i>
             </button>
           </span>
+
           <div className="px-6 py-4">
             <div
               className="font-bold text-xl mb-2"

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import {
-  addDoc,
-  collection,
-} from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { fireStoreDb } from "../../../firebaseConfig";
 import "./Newsletter.scss";
 const Newsletter = () => {
@@ -36,6 +35,8 @@ const Newsletter = () => {
     }
   };
 
+  const notify = () => toast("Wow so easy!");
+
   return (
     <div className="newsletter-section">
       <div className="newsletter-content">
@@ -49,6 +50,7 @@ const Newsletter = () => {
             required
           />
           <button onClick={() => handleCreate()}>Subscribe</button>
+          <ToastContainer />
         </div>
         <span className="text">
           Will be used in accordance with our Privacy Policy
