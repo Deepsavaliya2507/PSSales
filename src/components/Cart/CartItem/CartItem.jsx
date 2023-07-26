@@ -4,12 +4,11 @@ import { MdClose } from "react-icons/md";
 
 import "./CartItem.scss";
 const CartItem = () => {
-    const { cartItems, handleRemoveFromCart, handleCartProductQuantity } =
-        useContext(Context);
+    const { myCart, handleRemoveFromCart, handleCartProductQuantity } = useContext(Context);
 
     return (
         <div className="cart-products">
-            {cartItems?.map((item) => (
+            {myCart?.map((item) => (
                 <div
                     className="search-result-item"
                     key={item.id}
