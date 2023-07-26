@@ -455,7 +455,7 @@ import React, { useEffect, useState } from "react";
 import { fireStoreDb } from "../../../firebaseConfig";
 // import { hover } from "@testing-library/user-event/dist/hover";
 
-const FirebaseCrud = () => {
+const Product = () => {
   // const [newItem, setNewProductName] = useState("");
   const [productname, setProductname] = useState([]);
   const [Price, setProductPrice] = useState("");
@@ -636,4 +636,4 @@ const FirebaseCrud = () => {
   );
 };
 
-export default FirebaseCrud;
+export default Product;
