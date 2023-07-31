@@ -10,8 +10,8 @@ const firebaseConfig = {
   projectId: "pssales-11bfb",
   storageBucket: "pssales-11bfb.appspot.com",
   messagingSenderId: "118386057933",
-  appId: "1:118386057933:web:66bc06ed3b5fbaf3f3ff84",
-  measurementId: "G-6Q7ESNK3RB",
+  appId: "1:118386057933:web:ca16b0404ab0eab3f3ff84",
+  measurementId: "G-HJ11P5YBRN"
 };
 
 // Initialize Firebase

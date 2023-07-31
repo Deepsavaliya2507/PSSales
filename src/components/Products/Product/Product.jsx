@@ -580,55 +580,79 @@ const Product = () => {
       <ul>
         {data.map((item) => (
           <li key={item.id}>
-            <div className="grid justify-items-center">
-              <img src={item.image} alt="" srcset="" height={500} width={300} />
-            </div>
+            <div className="pt-12 pb-12 flex justify-around border-black">
+              <div className="max-w-sm relative rounded mr-4 w-1/4 overflow-hidden shadow-lg">
+                <div className="grid justify-items-center">
+                  <img
+                    src={item.image}
+                    alt=""
+                    srcset=""
+                    height={500}
+                    width={300}
+                  />
+                </div>
 
-            <span className="inline-block absolute top-0 right-0 text-sm font-semibold">
-              <input
-                className="px-3 py-1 rounded-full text-xl text-black font-semibold hover:text-black
+                <span className="inline-block text-sm font-semibold">
+                  <input
+                    className="px-3 py-1 rounded-full text-xl text-black font-semibold hover:text-black
                hover:bg-white focus:outline-none hover:text-bg-black relative"
-                // onClick={() => handleCreate()}
-                type="text"
-                placeholder="Update Product Name"
-                defaultValue={item.name}
-                onChange={(e) => setupdateProductName(e.target.value)} 
-              />
-              <p>{updateProductName}</p>
-                <span className="absolute">
-                  <i className="fa-regular fa-heart"></i>
+                    // onClick={() => handleCreate()}
+                    type="text"
+                    placeholder="Update Product Name"
+                    defaultValue={item.name}
+                    onChange={(e) => setupdateProductName(e.target.value)}
+                  />
+                  <p>{updateProductName}</p>
+                  <span className=" absolute top-0 right-0">
+                    <i className="fa-regular fa-heart"></i>
+                  </span>
+                  <span className="icon-space absolute top-0 right-0" required>
+                    <i className="fa-solid fa-heart text-red-600"></i>
+                  </span>
                 </span>
-                <span className="icon-space" required>
-                  <i className="fa-solid fa-heart text-red-600"></i>
-                </span>
-            </span>
 
-            <input
-              type="number"
-              placeholder="Update Product Price"
-              defaultValue={item.price}
-              onChange={(e) => setupdateProductPrice(e.target.value)}
-            />
-            <button
-              className="border border-blue-500 p-3 mr-2"
-              onClick={() =>
-                handleUpdate(item.id, updateProductName, updatedProductPrice)
-              }
-            >
-              Update Product
-            </button>
-            <button
-              className="border border-blue-500 p-3 mr-2"
-              onClick={() => handleDelete(item.id)}
-            >
-              Delete
-            </button>
-            <button
-              className="border border-blue-500 p-3 hover:"
-              onClick={() => handleLike(item)}
-            >
-              Like
-            </button>
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2">
+                    <input
+                      type="number"
+                      placeholder="Update Product Price"
+                      defaultValue={item.price}
+                      onChange={(e) => setupdateProductPrice(e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2">
+                    <button
+                      className="border border-blue-500 p-3 mr-2"
+                      onClick={() =>
+                        handleUpdate(
+                          item.id,
+                          updateProductName,
+                          updatedProductPrice
+                        )
+                      }
+                    >
+                      Update Product
+                    </button>
+                  </div>
+                </div>  
+
+                <button
+                  className="border border-blue-500 p-3 mr-2"
+                  onClick={() => handleDelete(item.id)}
+                >
+                  Delete
+                </button>
+                <button
+                  className="border border-blue-500 p-3 hover:"
+                  onClick={() => handleLike(item)}
+                >
+                  Like
+                </button>
+              </div>
+            </div>
           </li>
         ))}
       </ul>
