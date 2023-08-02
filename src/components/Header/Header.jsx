@@ -35,7 +35,7 @@ const Header = () => {
                     <ul className="left">
                         <li onClick={() => navigate("/")}>Home</li>
                         <li onClick={() => navigate("/about")}>About</li>
-                        <li>Categories</li>
+                        {/* <li>Categories</li> */}
                     </ul>
                     <div className="center" onClick={() => navigate("/")}>
                         PSSALES
