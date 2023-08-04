@@ -5,13 +5,13 @@ import { getFirestore } from "firebase/firestore";
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://support.google.com/firebase/answer/7015592
 const firebaseConfig = {
-  apiKey: "AIzaSyBKsXOneWLk1OGyKjlciYaXcUzhBxnmrnw",
-  authDomain: "pssales-11bfb.firebaseapp.com",
-  projectId: "pssales-11bfb",
-  storageBucket: "pssales-11bfb.appspot.com",
-  messagingSenderId: "118386057933",
-  appId: "1:118386057933:web:ca16b0404ab0eab3f3ff84",
-  measurementId: "G-HJ11P5YBRN"
+  apiKey: "AIzaSyAiB6YbGI7HZTZ5xlHvj93wGP-sLx22wVs",
+  authDomain: "playstation-aa848.firebaseapp.com",
+  projectId: "playstation-aa848",
+  storageBucket: "playstation-aa848.appspot.com",
+  messagingSenderId: "712093356519",
+  appId: "1:712093356519:web:1522f91bfe93155703ad42",
+  measurementId: "G-L71N7MZ6CF",
 };
 
 // Initialize Firebase

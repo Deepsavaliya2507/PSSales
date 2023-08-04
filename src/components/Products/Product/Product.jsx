@@ -504,15 +504,16 @@ const Product = () => {
     // Add a new document in collection "cities"
   };
 
-  const handleUpdate = async (id, newText, Price) => {
-    if (newText && Price) {
+  const handleUpdate = async (id, productname, Price , Image) => {
+    if (productname && Price && Image) {
       await setDoc(doc(fireStoreDb, "products", id), {
         name: productname,
-        image: "",
+        image: Image,
         price: Price,
       });
       fetchData();
     }
+    console.log(productname);
   };
 
   const handleDelete = async (id) => {
