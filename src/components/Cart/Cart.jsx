@@ -3,7 +3,6 @@ import { MdClose } from "react-icons/md";
 import { BsCartX } from "react-icons/bs";
 import { Context } from "../../utils/context";
 import CartItem from "./CartItem/CartItem";
-// import { loadStripe } from "@stripe/stripe-js";
 import { makePaymentRequest } from "../../utils/api";
 import { collection, getDocs } from "firebase/firestore";
 import { fireStoreDb } from "../../firebaseConfig";
@@ -35,18 +34,12 @@ const Cart = () => {
     setData(data);
   };
 
-  // const stripePromise = loadStripe(
-  //     process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY
-  // );
-
   const handlePayment = async () => {
     try {
-      // const stripe = await stripePromise;
       const res = await makePaymentRequest.post("/api/orders", {
         products: myCart,
       });
       await {
-        // sessionId: res.data.stripeSession.id,
         sessionId: res.data.id,
       };
     } catch (err) {
@@ -68,7 +61,6 @@ const Cart = () => {
 
         {!myCart && (
           <div className="empty-cart">
-            {/* <BsCartX /> */}
             {data.map((item) => (
               <div className="flex">
                 <img
@@ -122,8 +114,6 @@ const Cart = () => {
             </div>
           </>
         )}
-
-        {/* {myCarts} */}
       </div>
     </div>
   );
