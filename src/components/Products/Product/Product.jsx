@@ -49,12 +49,13 @@ const Product = () => {
     fetchData();
   };
 
-  const handleLike = async () => {
+  const handleLike = async (data) => {
     // if(productname && Price && Image){
     await addDoc(collection(fireStoreDb, "addproducts"), {
-      name: productname,
-      image: Image,
-      price: Price,
+      name: data.name,
+      image: data.image,
+      price: data.price,
+      id: data.id,
     });
     fetchData();
     // }
